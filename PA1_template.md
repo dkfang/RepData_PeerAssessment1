@@ -53,6 +53,11 @@ median(steps_perDay$steps)
 ## [1] 10765
 ```
 
+```r
+# dev.copy(png,"Histogram of Frequency of TotalSteps per day.png", width=480, height=480)
+# dev.off()
+```
+
 ## What is the average daily activity pattern?
 ##### 1. Make a histogram of the total number of steps taken each day
 
@@ -69,6 +74,11 @@ plot(as.integer(levels(steps_perInterval$interval)), steps_perInterval$average_s
 ```
 
 ![](PA1_template_files/figure-html/average daily activity pattern-1.png)<!-- -->
+
+```r
+#dev.copy(png,"Average Daily Activity Pattern.png", width=480, height=480)
+#dev.off()
+```
 
 ##### 2. 5-minute interval, on average across all the days in the dataset,
 
@@ -141,6 +151,11 @@ hist(as.numeric(steps_eachDay_complete$steps), breaks = 15, col = "blue", xlab =
 
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
+```r
+#dev.copy(png,"Histogram of the total number of steps taken each day.png", width=480, height=480)
+#dev.off()
+```
+
 ## Are there differences in activity patterns between weekdays and weekends?
 ##### 1.Create a new factor variable in the dataset with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
@@ -190,6 +205,8 @@ xyplot(average_steps ~  interval | day, data = week_data, layout = c(1,2), type 
 ![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 ```r
+#dev.copy(png,"panel plot.png", width=480, height=480)
+#dev.off()
 #There are some differences between the average number of steps between weekdays and weekends. For instance, it appears that the user started a bit later on weekend mornings and tend to do smaller numbers on weekend mornings.
 ```
 
